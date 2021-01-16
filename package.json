@@ -1,0 +1,9 @@
+{
+  "name": "webdicebot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "git add . && git commit -m new-deploy && git push -u origin master"
+  }
+}
