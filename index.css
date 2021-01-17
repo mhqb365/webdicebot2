@@ -362,6 +362,6 @@ button:focus {
     }
 }
 
-.brand:hover {
+.brand {
     transform: scale(2, 2);
 }
