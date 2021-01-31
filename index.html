@@ -2,154 +2,418 @@
 <html lang="en">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="description" content="Web DiceBot - Automate betting with programmer mode directly on dice sites">
+    <meta name="keywords" content="Web DiceBot, DiceBot, Dice">
+    <meta name="author" content="mhqb365@gmail.com">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
-	<meta name="description" content="Web DiceBot - Automate betting with programmer mode directly on dice sites">
-	<meta name="keywords" content="Web DiceBot, DiceBot, Dice">
-	<meta name="author" content="mhqb365@gmail.com">
-	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>Web DiceBot - Automate betting with programmer mode directly on dice sites</title>
 
-	<title>Web DiceBot - Automate betting with programmer mode directly on dice sites</title>
+    <link rel="shortcut icon" href="https://themesdesign.in/lizehen/demo/images/favicon.ico">
+    <link href="./src/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./src/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./src/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="./src/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="./src/owl.theme.css">
+    <link rel="stylesheet" type="text/css" href="./src/owl.transitions.css">
+    <link rel="stylesheet" type="text/css" href="./src/magnific-popup.css">
+    <link href="./src/style.css" rel="stylesheet" type="text/css">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        :root {
+            --uim-primary-opacity: 1;
+            --uim-secondary-opacity: 0.70;
+            --uim-tertiary-opacity: 0.50;
+            --uim-quaternary-opacity: 0.25;
+            --uim-quinary-opacity: 0;
+        }
 
+        .uim-svg {
+            display: inline-block;
+            height: 1em;
+            vertical-align: -0.125em;
+            font-size: inherit;
+            fill: var(--uim-color, currentColor);
+        }
 
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        .uim-svg svg {
+            display: inline-block;
+        }
 
-	<link rel="icon" type="image/png" href='/favicon.png'>
-	<link rel="stylesheet" type="text/css" href="./index.css?cache=1">
+        .uim-primary {
+            opacity: var(--uim-primary-opacity);
+        }
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        .uim-secondary {
+            opacity: var(--uim-secondary-opacity);
+        }
 
-	<script src="index.js"></script>
+        .uim-tertiary {
+            opacity: var(--uim-tertiary-opacity);
+        }
+
+        .uim-quaternary {
+            opacity: var(--uim-quaternary-opacity);
+        }
+
+        .uim-quinary {
+            opacity: var(--uim-quinary-opacity);
+        }
+    </style>
 </head>
 
-<body>
-	<nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-header navbar-mobile bg-white">
-		<div class="navbar-container container">
-			<div class="navbar-brand py-3">
-				<div class="navbar-brand">
-					<img class="brand" src="./logo.png" width="155px">
-				</div>
-			</div>
+<body data-spy="scroll" data-target="#navbarCollapse">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark navbar-light nav-sticky">
+        <div class="container">
+            <a class="navbar-brand logo text-uppercase" href="#">
+                <img src="./src/logo.png" class="logo-light" alt="" height="64">
+                <img src="./src/logo.png" class="logo-dark" alt="" height="64">
+                <!-- <img src="./src/logo-light.png" class="logo-light" alt="" height="22">
+                <img src="./src/logo-dark.png" class="logo-dark" alt="" height="22"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="mdi mdi-menu"></i>
+            </button>
 
-			<div class="collapse navbar-collapse justify-content-around" id="navbarNav">
-				<ul class="navbar-nav menu-navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link" href="https://facebook.com/webdicebot.official" target="_blank">
-							<p class="nav-link-number">✓</p>
-							<p class="nav-link-menu">Facebook Fanpage</p>
-						</a>
-					</li>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto navbar-center" id="mySidenav">
+                </ul>
 
-					<li class="nav-item">
-						<a class="nav-link" href="https://facebook.com/groups/superbotdice" target="_blank">
-							<p class="nav-link-number">✓</p>
-							<p class="nav-link-menu">Facebook Group</p>
-						</a>
-					</li>
+                <ul class="navbar-nav navbar-center">
+                    <li class="nav-item">
+                        <a href="https://dashboard.webdicebot.xyz/Login" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item d-inline-block d-lg-none">
+                        <a href="https://dashboard.webdicebot.xyz/Register" class="nav-link">Register</a>
+                    </li>
+                </ul>
+                <div class="navbar-button d-none d-lg-inline-block">
+                    <a href="https://dashboard.webdicebot.xyz/Register" class="btn btn-sm btn-soft-light btn-round">
+                        Register
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-					<li class="nav-item">
-						<a class="nav-link" href="https://t.me/BOTLUCKIGAMESs" target="_blank">
-							<p class="nav-link-number">✓</p>
-							<p class="nav-link-menu">Telegram Group</p>
-						</a>
-					</li>
+    <section class="bg-home bg-home-3" id="home">
+        <div class="bg-overlay"></div>
+        <div class="home-center">
+            <div class="home-desc-center">
+                <div class="container slidero">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-6">
+                            <div class="home-content text-center">
+                                <h1 class="home-title text-white">We're
+                                    <br>
+                                    <span class="text-primary">Web DiceBot</span>
+                                </h1>
+                                <p class="text-white-50 mt-4 f-20">
+                                    Automate betting with programmer mode
+                                    <br>
+                                    directly on dice sites
+                                </p>
+                                <div class="mt-5">
+                                    <a href="https://dashboard.webdicebot.xyz/BotInstaller" class="btn btn-primary">
+                                        Getting Started
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <canvas class="particles-js-canvas-el" width="1903" height="810"
+            style="width: 100%; height: 100%; position: absolute; top: 0px;"></canvas>
+    </section>
 
-					<li class="nav-item">
-						<a class="nav-link" href="https://discord.gg/vwhJs2t" target="_blank">
-							<p class="nav-link-number">✓</p>
-							<p class="nav-link-menu">Discord Server</p>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+    <section class="section pt-5" id="how-it-work">
+        <div class="container">
 
-	<div class="wrapper py-5">
-		<div class="header">
-			<div class="container header-container">
-				<div class="col-lg-6 offset-lg-1 header-img-section">
-					<img src="./header.png">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-box text-center">
+                        <h3 class="title-heading mt-4">
+                            Let’s get started in 3 easy steps
+                        </h3>
+                    </div>
+                </div>
+            </div>
 
-					<div class="circle-img d-none d-sm-block">
-						<img src="./circle.png" />
-					</div>
-				</div>
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <div class="work-box text-center p-3">
+                        <div class="arrow">
+                            <img src="./src/arrow-1.png" alt="">
+                        </div>
+                        <div class="work-count">
+                            <p class="mb-0">1</p>
+                        </div>
+                        <div class="work-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h5 class="mt-4">Join system</h5>
+                        <p class="text-muted mt-3">
+                            Join to the Web DiceBot system via Register/Login
+                        </p>
+                    </div>
+                </div>
 
-				<div class="col-lg-6 offset-lg-1 header-title-section">
-					<h1 class="header-title">Web DiceBot</h1>
+                <div class="col-lg-4">
+                    <div class="work-box text-center p-3">
+                        <div class="arrow">
+                            <img src="./src/arrow-2.png" alt="">
+                        </div>
+                        <div class="work-count">
+                            <p class="mb-0">2</p>
+                        </div>
+                        <div class="work-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h5 class="mt-4">Buy license</h5>
+                        <p class="text-muted mt-3">
+                            Deposit TRX (Tron) to your deposit address then buy license with days you wanna
+                        </p>
 
-					<h1 class="typewrite" data-period="2000"
-						data-type='[ "You are looking for an automatic betting tool on dice sites?", "You find the right place", "I will help you betting with programmer mode directly on dice sites", "Rent me and play with your own script right now" ]'>
-						<span class="wrap"></span>
-					</h1>
+                    </div>
+                </div>
 
-					<div class="learn-more-btn-section">
-						<a class="nav-link learn-more-btn btn-invert"
-							href="https://dashboard.webdicebot.xyz/BotInstaller">
-							Getting Started
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
+                <div class="col-lg-4">
+                    <div class="work-box text-center p-3">
+                        <div class="work-count">
+                            <p class="mb-0">3</p>
+                        </div>
+                        <div class="work-icon">
+                            <i class="fas fa-copy"></i>
+                        </div>
+                        <h5 class="mt-4">Install</h5>
+                        <p class="text-muted mt-3">
+                            Copy then paste installer to console tab of browser on dice site you play.
+                            <br>
+                            <a href="https://youtube.com/embed/Tu7oTnP7noc" target="_blank">
+                                See video
+                            </a>
+                        </p>
+                    </div>
+                </div>
 
-		<div class="strategy-section">
-			<div class="strategy-section-bg-graphics-section">
-				<img src="./strategy-section-bg.png">
-			</div>
+            </div>
 
-			<div class="container strategy-container">
-				<div class="col-lg-3 col-md-6 col-xs-8 offset-xs-2 strategy-card-section">
-					<div class="strategy-card">
-						<div class="strategy-card-icon-section">
-							<h1 class="display-4 header-title"><i class="fas fa-code"></i></h1>
-						</div>
-						<h2 style="color: #e83e8c;">Programmer Mode</h2>
-						<p>Play dice with your own strategy script Lua (v5.3) or Javascript</p>
-					</div>
-				</div>
+        </div>
+    </section>
 
-				<div class="col-lg-3 col-md-6 col-xs-8 offset-xs-2 strategy-card-section">
-					<div class="strategy-card">
-						<div class="strategy-card-icon-section">
-							<h1 class="display-4 header-title"><i class="fas fa-laptop"></i></h1>
-						</div>
-						<h2 style="color: #e83e8c;">Device Friendlly</h2>
-						<p>Run directly on the dice sites, run on all computer os</p>
-					</div>
-				</div>
+    <section class="section bg-light pt-5">
+        <div class="container">
+            <div class="row" id="counter">
+                <div class="col-lg-5">
+                    <div class="counter-info mt-4">
+                        <h3>A focused bot with a specialized mode</h3>
+                        <p class="text-muted mt-4">
+                            You are looking for an automatic betting tool on dice sites?
+                            You find the right place.
+                            We will help you betting with programmer mode directly on dice sites.
+                            Play with your own script right now
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="counter-box mt-4">
+                                <div class="media box-shadow bg-white p-4 rounded">
+                                    <div class="counter-icon mr-3">
+                                        <i class="fas fa-check text-primary h2"></i>
+                                    </div>
+                                    <div class="media-body pl-2">
+                                        <h3 class="counter-count">
+                                            <span class="counter-value" data-count="2">2</span>M+
+                                        </h3>
+                                        <h5 class="mt-2 mb-0 f-17">Installed</h5>
+                                        <p class="text-muted mb-0 mt-2 f-15">
+                                            More than 2 millions Installed
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-				<div class="col-lg-3 col-md-6 col-xs-8 offset-xs-2 strategy-card-section">
-					<div class="strategy-card">
-						<div class="strategy-card-icon-section">
-							<h1 class="display-4 header-title"><i class="fas fa-list"></i></h1>
-						</div>
-						<h2 style="color: #e83e8c;">Professional GUI</h2>
-						<p>Show full betting details, clear layout, optimized, easy to setup and use</p>
-					</div>
-				</div>
+                        <div class="col-lg-6">
+                            <div class="counter-box mt-4">
+                                <div class="media box-shadow bg-white p-4 rounded">
+                                    <div class="counter-icon mr-3">
+                                        <i class="fas fa-check text-primary h2"></i>
+                                    </div>
+                                    <div class="media-body pl-2">
+                                        <h3 class="counter-count">
+                                            <span class="counter-value" data-count="4500">4500</span>+
+                                        </h3>
+                                        <h5 class="mt-2 mb-0 f-17">Happy users</h5>
+                                        <p class="text-muted mb-0 mt-2 f-15">
+                                            Most users like project
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-				<div class="col-lg-3 col-md-6 col-xs-8 offset-xs-2 strategy-card-section">
-					<div class="strategy-card">
-						<div class="strategy-card-icon-section">
-							<h1 class="display-4 header-title"><i class="fas fa-hand-holding-usd"></i></h1>
-						</div>
-						<h2 style="color: #e83e8c;">Cheap Price</h2>
-						<p>Use all functions with only $0.2 per days, min is 10 days</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                    <div class="row mt-1">
+                        <div class="col-lg-6">
+                            <div class="counter-box mt-4">
+                                <div class="media box-shadow bg-white p-4 rounded">
+                                    <div class="counter-icon mr-3">
 
-	<p class="text-center p-4 small">
-		You already have a valid license before 1/1/2021? Go to old version:
-		<a href="https://old.webdicebot.xyz">https://old.webdicebot.xyz</a>
-	</p>
+                                        <i class="fas fa-check text-primary h2"></i>
+                                    </div>
+                                    <div class="media-body pl-2">
+                                        <h3 class="counter-count">
+                                            <span class="counter-value" data-count="2">2</span>+
+                                        </h3>
+                                        <h5 class="mt-2 mb-0 f-17">Years work</h5>
+                                        <p class="text-muted mb-0 mt-2 f-15">
+                                            Start from end of 2018
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="pricing">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-box text-center">
+                        <h3 class="title-heading mt-4">Best pricing</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4 justify-content-center">
+
+                <div class="col-lg-4">
+                    <div class="pricing-box border border-primary mt-4 rounded">
+                        <div class="pricing-content">
+
+                            <div class="pricing-lable">Cheap price</div>
+                            <h4 class="text-uppercase">Default</h4>
+                            <p class="text-muted mb-4 pb-1">
+
+                            </p>
+                            <hr>
+                            <div class="pricing-plan mt-4 text-primary text-center">
+                                <h1><sup class="text-muted">$</sup>2<small class="f-16 text-muted">/10 days</small></h1>
+                            </div>
+
+                            <hr>
+                            <div class="pricing-features pt-3">
+                                <p class="text-muted"><strong class="text-dark">Use all feature</strong></p>
+                            </div>
+                            <div class="pricing-border mt-3"></div>
+                            <div class="mt-4 pt-2 text-center">
+                                <a href="https://dashboard.webdicebot.xyz/BuyLicense" class="btn btn-primary btn-round">
+                                    Purchase Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="footer-info mt-4">
+                        <img src="./src/img-1.png" class="img-fluid" alt="">
+
+                        <p class="text-muted mt-4 mb-2">Make money smartly with your dice script</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="mt-4">
+                        <h5 class="text-uppercase f-16">Community</h5>
+
+                        <ul class="list-unstyled footer-link mt-3">
+                            <li>
+                                <a href="https://facebook.com/webdicebot.official" target="_blank">
+                                    Facebook Fanpage
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://facebook.com/groups/superbotdice" target="_blank">
+                                    Facebook Group
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://t.me/BOTLUCKIGAMESs" target="_blank">
+                                    Telegram Group
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/vwhJs2t" target="_blank">
+                                    Discord Server
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center">
+                        <p class="text-muted mb-0">Web DiceBot &copy; 2019 - <span id="currentYear"></span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="./src/jquery.min.js"></script>
+    <script src="./src/bootstrap.bundle.min.js"></script>
+    <script src="./src/jquery.easing.min.js"></script>
+    <script src="./src/jquery.mb.YTPlayer.js"></script>
+
+    <script src="./src/jquery.magnific-popup.min.js"></script>
+
+    <script src="./src/contact.init.js"></script>
+
+    <script src="./src/particles.js"></script>
+    <script src="./src/particles.app.js"></script>
+
+    <script src="./src/counter.init.js"></script>
+
+    <script src="./src/owl.carousel.min.js"></script>
+    <script src="./src/bundle.js"></script>
+    <script src="./src/app.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            $('#currentYear').text(new Date().getFullYear())
+        })
+    </script>
 </body>
 
 </html>
