@@ -61,7 +61,7 @@ $('.mfp-image').magnificPopup({
 });
 
 // typed
-$(".element").each(function(){
+$(".element").each(function() {
     var $this = $(this);
     $this.typed({
         strings: $this.attr('data-elements').split(','),
@@ -72,5 +72,3 @@ $(".element").each(function(){
 
 // video
 $(".player").mb_YTPlayer();
-
-
