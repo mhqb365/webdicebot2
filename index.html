@@ -13,12 +13,6 @@
 
     <link rel="shortcut icon" href="src/favicon.png">
     <link href="src/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="src/materialdesignicons.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="src/pe-icon-7-stroke.css">
-    <link rel="stylesheet" type="text/css" href="src/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="src/owl.theme.css">
-    <link rel="stylesheet" type="text/css" href="src/owl.transitions.css">
-    <link rel="stylesheet" type="text/css" href="src/magnific-popup.css">
     <link href="src/style.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -115,7 +109,7 @@
                                     <br> directly on dice sites
                                 </p>
                                 <div class="mt-5 text-white p-4">
-                                    <a href="https://dashboard.webdicebot.xyz" class="btn btn-primary mb-3">
+                                    <a href="https://dashboard.webdicebot.xyz/#/" class="btn btn-primary mb-3">
                                         Getting Started
                                     </a>
                                 </div>
@@ -339,7 +333,8 @@
                             </div>
                             <div class="pricing-border mt-3"></div>
                             <div class="mt-4 pt-2 text-center">
-                                <a href="https://dashboard.webdicebot.xyz/#/BuyLicense" class="btn btn-primary btn-round">
+                                <a href="https://dashboard.webdicebot.xyz/#/BuyLicense"
+                                    class="btn btn-primary btn-round">
                                     Purchase now
                                 </a>
                             </div>
@@ -515,24 +510,32 @@
     </section>
 
     <script src="src/jquery.min.js"></script>
-    <script src="src/bootstrap.bundle.min.js"></script>
-    <script src="src/jquery.easing.min.js"></script>
-    <script src="src/jquery.mb.YTPlayer.js"></script>
-
-    <script src="src/jquery.magnific-popup.min.js"></script>
-
-    <script src="src/contact.init.js"></script>
-
-    <script src="src/counter.init.js"></script>
-
-    <script src="src/owl.carousel.min.js"></script>
-    <script src="src/bundle.js"></script>
-    <script src="src/app.js"></script>
 
     <script>
         $(document).ready(() => {
             $('#currentYear').text(new Date().getFullYear())
         })
+
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop()
+
+            if (scroll >= 50) {
+                $(".sticky").addClass("nav-sticky")
+            }
+            else {
+                $(".sticky").removeClass("nav-sticky");
+            }
+        });
+
+        $('.smoothlink').on('click', function (event) {
+            let $anchor = $(this)
+
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top - 0
+            }, 1500, 'easeInOutExpo')
+
+            event.preventDefault();
+        });
     </script>
 </body>
 
