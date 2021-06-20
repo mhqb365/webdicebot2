@@ -11,8 +11,8 @@
 
     <title>Web DiceBot - Automate betting with programmer mode directly on dice sites</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="shortcut icon" href="src/favicon.png">
-    <link href="src/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="src/style.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -59,55 +59,29 @@
             opacity: var(--uim-quinary-opacity);
         }
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body data-spy="scroll" data-target="#navbarCollapse">
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark navbar-light nav-sticky">
-        <div class="container">
-            <a class="navbar-brand logo text-uppercase" href="#">
-                <img src="src/logo.png" class="rounded" width="240px" alt="Web DiceBot">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ml-auto navbar-center" id="mySidenav">
-                </ul>
-
-                <ul class="navbar-nav navbar-center">
-                    <li class="nav-item">
-                        <a href="https://dashboard.webdicebot.xyz/#/Login" class="nav-link">Login</a>
-                    </li>
-                    <li class="nav-item d-inline-block d-lg-none">
-                        <a href="https://dashboard.webdicebot.xyz/#/Register" class="nav-link">Register</a>
-                    </li>
-                </ul>
-                <div class="navbar-button d-none d-lg-inline-block">
-                    <a href="https://dashboard.webdicebot.xyz/#/Register" class="btn btn-sm btn-soft-light btn-round">
-                        Register
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <section class="bg-home bg-home-3">
+    <section class="home">
         <div class="bg-overlay"></div>
+
         <div class="home-center">
             <div class="home-desc-center">
-                <div class="container slidero">
+                <div class="container">
                     <div class="row align-items-center justify-content-center">
                         <div class="col-lg-6">
                             <div class="home-content text-center">
-                                <h1 class="home-title text-white">
+                                <h1 class="text-white display-2">
                                     Web DiceBot
                                 </h1>
+
                                 <p class="mt-4 f-20 text-white">
                                     Automate betting with programmer mode
                                     <br> directly on dice sites
                                 </p>
+
                                 <div class="mt-5 text-white p-4">
                                     <a href="https://dashboard.webdicebot.xyz/#/" class="btn btn-primary mb-3">
                                         Getting Started
@@ -119,19 +93,16 @@
                 </div>
             </div>
         </div>
-        <canvas class="particles-js-canvas-el" width="1903" height="810"
-            style="width: 100%; height: 100%; position: absolute; top: 0px;">
-        </canvas>
     </section>
 
-    <section class="py-4 text-center">
+    <div class="alert alert-warning small text-center">
         If you already have a valid license before 1/1/2021
         <br>
         Go to
         <a href="https://old.webdicebot.xyz">https://old.webdicebot.xyz</a>
-    </section>
+    </div>
 
-    <section class="section pt-5" id="how-it-work">
+    <section class="section my-5">
         <div class="container">
 
             <div class="row">
@@ -156,10 +127,9 @@
                         <div class="work-icon">
                             <i class="fas fa-robot"></i>
                         </div>
-                        <h5 class="mt-4">Make interface</h5>
+                        <h5 class="mt-4">Make Interface</h5>
                         <p class="text-muted mt-3">
-                            We will make bot interface directly on dice sites after you installed.
-                            Only use official bot installer at dashboard.webdicebot.xyz
+                            We make bot interface directly on dice sites after you install
                         </p>
                     </div>
                 </div>
@@ -175,10 +145,9 @@
                         <div class="work-icon">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h5 class="mt-4">Read script</h5>
+                        <h5 class="mt-4">Read Script</h5>
                         <p class="text-muted mt-3">
-                            Paste your dice script (Lua or Javascript) to script box.
-                            Dice script must follow syntax of programming language
+                            We read your dice script (Lua or Javascript) on script box
                         </p>
                     </div>
                 </div>
@@ -189,12 +158,11 @@
                             <p class="mb-0">3</p>
                         </div>
                         <div class="work-icon">
-                            <i class="fas fa-poo-storm"></i>
+                            <i class="fas fa-play"></i>
                         </div>
-                        <h5 class="mt-4">Auto betting</h5>
+                        <h5 class="mt-4">Auto Betting</h5>
                         <p class="text-muted mt-3">
-                            After click start button, we will auto betting with your script.
-                            Earning or losing depend on your dice script
+                            Betting base on your dice script, earning or losing depend on script you have
                         </p>
                     </div>
                 </div>
@@ -202,12 +170,13 @@
         </div>
     </section>
 
-    <section class="section bg-light pt-5">
+    <section class="section bg-light my-5">
         <div class="container">
             <div class="row" id="counter">
                 <div class="col-lg-5">
                     <div class="counter-info mt-4">
                         <h3>A focused bot with a specialized mode</h3>
+
                         <p class="text-muted mt-4">
                             You are looking for an automatic betting tool on dice sites? You found the right place. We
                             will help you betting with programmer mode directly on dice sites. Auto betting with your
@@ -301,7 +270,7 @@
         </div>
     </section>
 
-    <section class="section" id="pricing">
+    <section class="section my-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -316,10 +285,12 @@
                 <div class="col-lg-4">
                     <div class="pricing-box border border-primary mt-4 rounded">
                         <div class="pricing-content">
-                            <h4 class="text-uppercase">Standard</h4>
-                            <div class="pricing-lable">CHEAP</div>
+                            <h4 class="text-uppercase">The only</h4>
+                            <div class="pricing-lable">
+                                <i class="far fa-snowflake"></i>
+                            </div>
                             <p class="text-muted mb-4 pb-1">
-                                Much cheaper than other bots
+                                Cheaper than other paid bots
                             </p>
                             <hr>
                             <div class="pricing-plan mt-4 text-primary text-center">
@@ -335,7 +306,7 @@
                             <div class="mt-4 pt-2 text-center">
                                 <a href="https://dashboard.webdicebot.xyz/#/BuyLicense"
                                     class="btn btn-primary btn-round">
-                                    Purchase now
+                                    Purchase Now
                                 </a>
                             </div>
                         </div>
@@ -345,9 +316,8 @@
         </div>
     </section>
 
-    <section class="py-5 bg-light">
+    <section class="section bg-light mt-5">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer-info mt-4">
@@ -505,11 +475,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-
-    <script src="src/jquery.min.js"></script>
 
     <script>
         $(document).ready(() => {
