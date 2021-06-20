@@ -743,7 +743,7 @@ a {
 .home {
   height: 93vh;
   min-height: 860px;
-  background: url("header.png") no-repeat, url("https://demo.artureanec.com/html/cryptoland/demo_6/img/main_bg.png");
+  background: url("header.png") no-repeat, url("bg.png");
   background-position: center;
   font-size: 70px;
 }
