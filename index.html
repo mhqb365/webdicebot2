@@ -64,7 +64,7 @@
 </head>
 
 <body>
-    <section class="home">
+    <section class="home" id="app">
         <div class="home-center">
             <div class="home-desc-center">
                 <div class="container">
@@ -480,6 +480,10 @@
         </div>
     </section>
 
+    <a class="gotop pl-2 pr-2 rounded" href="#app">
+        <i class="fas fa-angle-up text-white" style="font-size: 36px"></i>
+    </a>
+
     <script>
         $(document).ready(() => {
             $('#currentYear').text(new Date().getFullYear())
@@ -504,6 +508,21 @@
             }, 1500, 'easeInOutExpo')
 
             event.preventDefault();
+        });
+
+        let duration = 5e2;
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 2e2) {
+                $(".gotop").fadeIn(duration);
+            } else {
+                $(".gotop").fadeOut(duration);
+            }
+        });
+
+        $(".gotop").click(function (event) {
+            event.preventDefault();
+            $("html").animate({ scrollTop: 0 }, duration);
+            return false;
         });
     </script>
 </body>

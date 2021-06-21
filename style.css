@@ -733,6 +733,16 @@ a {
   background-color: rgba(35, 37, 47, 0.8);
 }
 
+.gotop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+  /* color: #fff; */
+  background: #007bff;
+  display: none;
+}
+
 .home {
   height: 80vh;
   min-height: 720px;
