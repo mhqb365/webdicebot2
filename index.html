@@ -19,44 +19,25 @@
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <style>
-        :root {
-            --uim-primary-opacity: 1;
-            --uim-secondary-opacity: 0.70;
-            --uim-tertiary-opacity: 0.50;
-            --uim-quaternary-opacity: 0.25;
-            --uim-quinary-opacity: 0;
+        .img-loader {
+            animation: fa-spin 2s infinite linear;
         }
 
-        .uim-svg {
-            display: inline-block;
-            height: 1em;
-            vertical-align: -0.125em;
-            font-size: inherit;
-            fill: var(--uim-color, currentColor);
+        .spinner-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            z-index: 999999;
         }
 
-        .uim-svg svg {
-            display: inline-block;
-        }
-
-        .uim-primary {
-            opacity: var(--uim-primary-opacity);
-        }
-
-        .uim-secondary {
-            opacity: var(--uim-secondary-opacity);
-        }
-
-        .uim-tertiary {
-            opacity: var(--uim-tertiary-opacity);
-        }
-
-        .uim-quaternary {
-            opacity: var(--uim-quaternary-opacity);
-        }
-
-        .uim-quinary {
-            opacity: var(--uim-quinary-opacity);
+        .spinner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 
@@ -64,11 +45,17 @@
 </head>
 
 <body>
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <img src="logo.png" class="rounded-circle img-loader" width="64px" />
+        </div>
+    </div>
+
     <section class="home" id="app">
         <div class="home-center">
             <div class="home-desc-center">
                 <div class="container">
-                    <div class="row align-items-center justify-content-center bg-overlay pt-5">
+                    <div class="row align-items-center justify-content-center bg-overlay p-4 pt-5">
                         <div class="col-lg-6">
                             <div class="home-content text-center">
                                 <h1 class="text-white display-2">
@@ -80,7 +67,7 @@
                                     <br> directly on dice sites
                                 </p>
 
-                                <div class="mt-5 text-white p-4">
+                                <div class="mt-4 text-white ">
                                     <a href="https://dashboard.webdicebot.xyz/#/" class="btn btn-primary mb-3">
                                         Getting Started
                                     </a>
@@ -101,8 +88,22 @@
     </div>
 
     <section class="section py-5 text-center bg-light">
-        <img src="header.png" class="w-75"
-            alt="Web DiceBot - Automate betting with programmer mode directly on dice sites" />
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-box text-center">
+                        <h3 class="title-heading mt-4">
+                            №1 - Paid DiceBot
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <img src="header.png" class="w-75"
+                    alt="Web DiceBot - Automate betting with programmer mode directly on dice sites" />
+            </div>
+        </div>
     </section>
 
     <section class="section py-5">
@@ -283,7 +284,6 @@
             </div>
 
             <div class="row mt-5 pt-4 justify-content-center">
-
                 <div class="col-lg-4">
                     <div class="pricing-box border border-primary mt-4 rounded">
                         <div class="pricing-content">
@@ -388,11 +388,19 @@
                                     </li>
                                     <li>
                                         <span class="badge badge-success">live</span>
-                                        <a href="https://freebitco.in/?r=38164796" target="_blank"> freebitco.in </a>
+                                        <a href="https://duckdice.io" target="_blank">
+                                            duckdice.io
+                                        </a>
                                     </li>
                                     <li>
                                         <span class="badge badge-success">live</span>
-                                        <a href="https://jacksclub.io?r=~mhqb365" target="_blank"> jacksclub.io </a>
+                                        <a href="https://faucetpay.io/?r=2102948" target="_blank">
+                                            faucetpay.io
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span class="badge badge-success">live</span>
+                                        <a href="https://freebitco.in/?r=38164796" target="_blank"> freebitco.in </a>
                                     </li>
                                 </ul>
                             </div>
@@ -403,6 +411,10 @@
                                 <h5 class="text-uppercase f-16"></h5>
 
                                 <ul class="list-unstyled footer-link mt-3">
+                                    <li>
+                                        <span class="badge badge-success">live</span>
+                                        <a href="https://jacksclub.io?r=~mhqb365" target="_blank"> jacksclub.io </a>
+                                    </li>
                                     <li>
                                         <span class="badge badge-danger">closed</span>
                                         <a href="https://gigabet.com/r/mhqb365" target="_blank"> gigabet.com </a>
@@ -514,6 +526,15 @@
     <script>
         $(document).ready(() => {
             $('#currentYear').text(new Date().getFullYear())
+
+            let preloaderFadeOutTime = 2e3;
+
+            function hidePreloader() {
+                let preloader = $(".spinner-wrapper");
+                preloader.fadeOut(preloaderFadeOutTime);
+            }
+
+            hidePreloader();
         })
 
         $(window).scroll(function () {
@@ -534,23 +555,24 @@
                 scrollTop: $($anchor.attr('href')).offset().top - 0
             }, 1500, 'easeInOutExpo')
 
-            event.preventDefault();
+            event.preventDefault()
         });
 
-        let duration = 5e2;
+        let duration = 5e2
+
         $(window).scroll(function () {
             if ($(this).scrollTop() > 2e2) {
                 $(".gotop").fadeIn(duration);
             } else {
-                $(".gotop").fadeOut(duration);
+                $(".gotop").fadeOut(duration)
             }
-        });
+        })
 
         $(".gotop").click(function (event) {
-            event.preventDefault();
+            event.preventDefault()
             $("html").animate({ scrollTop: 0 }, duration);
-            return false;
-        });
+            return false
+        })
     </script>
 </body>
 
