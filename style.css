@@ -731,6 +731,7 @@ a {
 
 .bg-overlay {
   background-color: rgba(35, 37, 47, 0.8);
+  border-radius: .25rem;
 }
 
 .gotop {
